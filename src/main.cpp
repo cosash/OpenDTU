@@ -125,6 +125,9 @@ void setup()
         config.Dtu_Serial = dtuId;
         Configuration.write();
     }
+    MessageOutput.print(F("Setting Garage-Output-Pin ..."));    
+    pinMode(22, OUTPUT);
+    digitalWrite(22, HIGH);
     MessageOutput.println(F("done"));
 
     InverterSettings.init();
